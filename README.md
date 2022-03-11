@@ -1,32 +1,35 @@
 # How to use
 
-first import the require libraries
+#### First import the require libraries
 
+```
 from schedule import Schedule
 from datetime import datetime, timedelta
+```
 
-then make an object from schedule class like this
+#### Then make an object from schedule class like this
 
-schedule = Schedule()
+`schedule = Schedule()`
 
-use 'add' method
+#### Use 'add' method to add command:
 
-To add command:
-
+```
 schedule.add({
-'type': 'command',
-'command': ['ls'],
-'time': datetime.now() + timedelta(seconds=2),
+    'type': 'command',
+    'command': ['ls'],
+    'time': datetime.now() + timedelta(seconds=2),
 })
+```
 
-To add reminder
+#### To add reminder
 
+```
 schedule.add({
-'type': 'reminder',
-'reminder_text': 'The example of reminder text',
-'time': datetime.now() + timedelta(seconds=5),
+    'type': 'reminder',
+    'reminder_text': 'The example of reminder text',
+    'time': datetime.now() + timedelta(seconds=5),
 })
+```
+#### Then:
 
-Then:
-
-schedule.run()
+`schedule.run()`
